@@ -22,7 +22,6 @@ python-math
 speedtest-cli 
 shortzy 
 fuzzywuzzy 
-wheel 
 gunicorn==20.1.0 
 werkzeug==2.0.2 
 Flask 
@@ -48,6 +47,20 @@ apscheduler
 pyshorteners 
 pyromod 
 colorama
+
+# render.yaml file
+build:
+  os:
+    # OpenCV और अन्य ग्राफिकल निर्भरताओं के लिए
+    - name: "libsm6"
+    - name: "libxext6"
+    - name: "libxrender-dev"
+    - name: "libgl1-mesa-glx"
+
+    # Pillow और इमेज प्रोसेसिंग निर्भरताओं के लिए
+    - name: "libjpeg-dev"
+    - name: "zlib1g-dev"
+    - name: "libtiff-dev"
 
 
 
